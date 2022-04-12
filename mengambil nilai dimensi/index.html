@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Jquery</title>
+    <script src="../jquery/jquery.js"></script>
+    <style>
+        #boxes_wrap{
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            border:5px solid black;
+            margin:10px;
+        }
+    </style>
+
+</head>
+<body>
+    <img src="../img/test.jpg
+    " alt="" width="150px" height="150px">
+    <h1>Belajar Jquery</h1>
+
+<div id="boxes_wrap">
+    <div class="box">Box 1</div>
+    <div class="boxes">Baris Pertama</div>
+    <div class="boxes">Baris Kedua</div>
+    <div class="boxes">Baris Ketiga</div>
+    <div class="boxes">Baris Keempat</div>
+</div>
+ 
+
+    <script>
+        // dimensi
+        // widht
+        $(document).ready(function(){
+            let nilai = $('#boxes_wrap').innerWidth();
+            $('.box').text(nilai);
+        });
+
+    </script>    
+</body>
+</html>
