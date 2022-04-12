@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Jquery</title>
+    <style>
+        .box {
+            height:100px;
+            width: 100px;
+            background-color: gray;
+        }
+    </style>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+    <img src="../img/test.jpg
+    " alt="" width="150px" height="150px">
+    <h1>Belajar Jquery</h1>
+ <div class="box">Box 1</div>
+
+<div id="boxes_wrap">  
+    <div class="boxes">Baris Pertama</div>
+    <div class="boxes">Baris Kedua</div>
+    <div class="boxes">Baris Ketiga</div>
+    <div class="boxes">Baris Keempat</div>
+</div>
+    <form>
+        <input type="text" id="inputText">
+        <input type="submit">
+    </form>
+
+    <script>
+        // memastikan file sudah diload dengan sempurna
+        $(document).ready(function(){
+        
+        // ------------- menambahkan file 
+        // append / prepend | after / before
+        
+        // append menambahkan di akhir 
+        $('#boxes_wrap').append('<div>Halo</div>');
+        // preppend sebaliknya di awal
+        $('#boxes_wrap').prepend('<div>Halo</div>');
+        // before digunakan sebelum kotak tersebut
+        $('#boxes_wrap').before('<div>test</div>');
+        // after digunakan setelah diluar kotak tersebut
+        $('#boxes_wrap').after('<div>test 2</div>');
+            
+        // ============= menghapus file
+        // remove and empty
+        // remove menghapus element tersebut
+        // empty menghapus tulisan saja
+        
+        $('.boxes').remove();
+        $('.box').empty();
+
+
+
+       
+       
+        });
+
+    </script>    
+</body>
+</html>

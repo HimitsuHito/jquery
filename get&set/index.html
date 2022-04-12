@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Jquery</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+    <img src="../img/test.jpg
+    " alt="" width="150px" height="150px">
+    <h1>Belajar Jquery</h1>
+
+<div id="boxes_wrap">
+    <div class="box">Box 1</div>
+    <div class="boxes">Baris Pertama</div>
+    <div class="boxes">Baris Kedua</div>
+    <div class="boxes">Baris Ketiga</div>
+    <div class="boxes">Baris Keempat</div>
+</div>
+    <form class="text1">
+        <input type="text" id="inputText1">
+        <input type="submit">
+    </form>
+    <form class="text2">
+        <input type="text" id="inputText2">
+        <input type="submit">
+    </form>
+
+    <script>
+        // memastikan file sudah diload dengan sempurna
+
+        // // jquery selection 
+        $(document).ready(function(){
+
+
+
+        // get dan set nilai
+
+        $('.text1').submit(function(){
+           let tulisan = $('#inputText1').val();
+           $('h1').text();
+
+         // mencegah reload/sifat 
+        event.preventDefault();
+        });
+
+        $('.text2').submit(function(){
+            alert($('#inputText2').val());
+        });
+        // // $('#boxes_wrap').html(); untuk melihat semua file html dan bisa untuk merubah isinya
+        });
+
+    </script>    
+</body>
+</html>
