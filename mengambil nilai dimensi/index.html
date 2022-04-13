@@ -29,11 +29,19 @@
  
 
     <script>
-        // dimensi
-        // widht
+        //  dimensi
+        // width / height = content
+        // innerWidth = kontent + padding
+        // outerWidth = content + padding + border
+        // (true) -> margin
+
         $(document).ready(function(){
-            let nilai = $('#boxes_wrap').innerWidth();
-            $('.box').text(nilai);
+        //     let nilai = $('#boxes_wrap').outerWidth(true);
+        //     $('.box').text(nilai);
+        // merubah nilai dimensi
+        let nilai = $('#boxes_wrap').height(120).width(120);
+        $('.box').text(nilai);
+
         });
 
     </script>    

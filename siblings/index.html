@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travesring</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+    <img src="../img/test.jpg" width="150px" height="150px"alt="">    <h1>Belajar Jquery</h1>
+    <ul>
+        <li>Belajar</li>
+        <li>Html</li>
+        <li>css</li>
+        <li>Jquery</li>
+        <li>database</li>
+        <li>php</li>
+        <li>Node Js</li>
+
+    </ul>
+
+<script>
+    $(document).ready(function(){
+    //----Siblings----
+    // next |nextAll | nextUntil('param') ~
+    // prev | prevAll | prevUntil('param')
+
+    // sibling digunakan selain variabel dia maka yang lain akan besar
+    $('li:eq(2)').siblings().css('fontSize','20px');
+    // next -> setelah variabel yang dipilih maka akan dirubah
+    // $('li:eq(2)').next().css('color','green');
+    
+    // nextAll -> semua setelah variabel yang dipilih akan dirubah
+    // $('li:eq(2)').nextAll().css('fontSize','30px');
+   
+    // nextUntil -> akan berhenti pada variabel yang dipilih
+    $('li:eq(2)').nextUntil('li:eq(6)').css('backgroundColor','skyblue');
+
+    });
+</script>
+</body>
+</html>

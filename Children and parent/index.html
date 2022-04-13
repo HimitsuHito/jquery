@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travesring</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+    <img src="../img/test.jpg" width="150px" height="150px"alt="">    <h1>Belajar Jquery</h1>
+    <ul>
+        <div>
+           div satu
+        </div>
+        <div> div dua
+        </div>
+        <p>paragraf atas</p>
+        <li>Belajar</li>
+        <li>Html</li>
+        <li class="css">css</li>
+        <li>Jquery</li>
+        <li>database</li>
+        <li>php</li>
+        <div>
+            <p class="paragraf">Paragraf Dalam</p>
+            <span>Span dalam</span>
+        </div>
+       
+        <span>span luar</span>
+    </ul>
+<script>
+    $(document).ready(function(){
+
+  
+    // children hanya 1 level dibawahnya
+    
+    // jika seperti contoh diatas maka yang akan terkena hanya span luar bukan span  yang didalam div
+    $('ul').children('span').css('color','green');
+    // find yang dalam dan luar kena melihat semua anaknya
+    $('ul').find('span').css('color','green');
+    
+    // parent => hanya melihat 1 parent diatasnya
+    $('.paragraf').parent().css('border','2px solid yellow');
+    // parents -> melihat seluruh parentnya yang diatasnya
+
+    // atau bisa dibatasi dengan ditulis parameternya
+    $('.css').parents('ul').css('backgroundColor','skyblue');
+
+  });
+
+
+</script>
+</body>
+</html>

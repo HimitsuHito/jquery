@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Jquery</title>
+    <script src="../jquery/jquery.js"></script>
+    <style>
+        .box {
+            width:200px;
+            height:200px;
+            background-color: gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="../img/test.jpg
+    " alt="" width="150px" height="150px">
+    <h1>Belajar Jquery</h1>
+    <div class="box">Box 1</div>
+    <div class="container">
+        <button class="show">Show</button>
+        <button class="hide">Hide</button>
+        <button class="toggle">Toggle</button>
+        <button class="stop">Stop</button>
+    </div>
+    <script> 
+    // menyembukan dan menampilkan pada jquery
+       $(document).ready(function(){
+
+    // hide - show - toggle
+        // $('.show').click(function(){
+        //     $('.box').show();
+        // })  
+        
+        // $('.hide').click(function(){
+        //     $('.box').hide();
+        // })  
+     
+        // $('.toggle').click(function(){
+        //     $('.box').toggle();
+        // })  
+     
+    // fadeIn - fadeOut - fadeTo(time,opacity) fadeToggle
+    //    $('.show').click(function(){
+    //         $('.box').fadeIn();
+    //     })  
+     
+    //     $('.hide').click(function(){
+    //         $('.box').fadeOut();
+    //     })  
+     
+    //     // $('.toggle').click(function(){
+    //     //     $('.box').fadeToggle();
+    //     // })  
+    //     // ketika sudah di fadeTo maka sifat asli yang awal tidak akan kembali lagi keawal
+    //     $('.toggle').click(function(){
+    //         $('.box').fadeTo(2000,0.5);
+    //     })  
+
+    // slideUp - slideDown - slideToggle
+    // slideDown untuk bergerak ke bawah
+    //  $('.show').click(function(){
+    //         $('.box').slideDown(2000);
+    //     })  
+    //     // slideUp untuk bergerak keatas
+    //     $('.hide').click(function(){
+    //         $('.box').slideUp(2000);
+    //     })  
+     
+    //     $('.toggle').click(function(){
+    //         $('.box').slideToggle();
+    //     })  
+        
+    // stop animasi - callback - chaining
+    // callback
+        // callback
+        // menambahkan function pada sebuah animasi
+         $('.show').click(function(){
+            $('.box').slideDown(2000,function(){
+                alert('ini callback');
+            });
+        });
+
+        
+        // chaining
+        // menambahkan animasi 
+        $('.hide').click(function(){
+            $('.box').slideUp(2000).fadeIn(2000).fadeTo(2000,0.);
+        })  
+     
+        $('.toggle').click(function(){
+            $('.box').slideToggle();
+        })  
+       
+        
+        $('.stop').click(function(){
+            $('.box').stop();
+        });
+     
+      });   
+    </script>    
+
+</body>
+</html>

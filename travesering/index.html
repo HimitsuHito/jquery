@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travesring</title>
+    <script src="../jquery/jquery.js"></script>
+</head>
+<body>
+    <img src="../img/test.jpg" width="150px" height="150px"alt="">
+    <h1>Belajar Jquery</h1>
+    <ul>
+        <li>Belajar</li>
+        <li>Html</li>
+        <li>css</li>
+        <li>Jquery</li>
+        <li>database</li>
+
+    </ul>
+
+<script>
+    $(document).ready(function(){
+    //----Traversring----
+    // filter | not
+   
+    $('li').first().css('color', 'blue');
+    $('li:eq(2)').css('color','green');
+    $('li').last().css('color', 'red');
+    
+    // filter = hanya element tersebut yang akan dipilih
+    $('li').filter('li:eq(3)').css('backgroundColor', 'skyblue');
+
+    // not = element selain yang dipilih
+    $('li').not('li:eq(3)').css('backgroundColor', 'violet');
+
+
+    });
+</script>
+</body>
+</html>
