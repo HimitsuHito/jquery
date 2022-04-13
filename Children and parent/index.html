@@ -6,12 +6,11 @@
 </head>
 <body>
     <img src="../img/test.jpg" width="150px" height="150px"alt="">    <h1>Belajar Jquery</h1>
+
+<div class="tester">
+    <div>Div satu banget</div>
+    </div>
     <ul>
-        <div>
-           div satu
-        </div>
-        <div> div dua
-        </div>
         <p>paragraf atas</p>
         <li>Belajar</li>
         <li>Html</li>
@@ -26,9 +25,10 @@
        
         <span>span luar</span>
     </ul>
+</div>
 <script>
     $(document).ready(function(){
-
+    // childer | find | parent | parents
   
     // children hanya 1 level dibawahnya
     
@@ -43,6 +43,10 @@
 
     // atau bisa dibatasi dengan ditulis parameternya
     $('.css').parents('ul').css('backgroundColor','skyblue');
+  
+    // parentsUntil
+    $('.css').parentsUntil('.tester').css('backgroundColor','skyblue');
+    
 
   });
 
